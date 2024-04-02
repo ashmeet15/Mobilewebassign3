@@ -1,1 +1,11 @@
-<p>petlist works!</p>
+<div class="pet-catalog">
+  <h2>Pet Catalog</h2>
+  <div *ngFor="let pet of pets" class="pet-item">
+    <img [src]="pet.image" alt="{{ pet.name }}" (click)="selectPet(pet)">
+    <div class="pet-info">
+      <h3>{{ pet.name }}</h3>
+      <p>{{ pet.petKind }}</p>
+      <p>Age: {{ pet.age }}</p>
+    </div>
+  </div>
+</div>

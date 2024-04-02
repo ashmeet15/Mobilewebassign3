@@ -1,1 +1,6 @@
-<p>petdetail works!</p>
+<div *ngIf="pet" class="pet-detail-container">
+  <h2>{{ pet.name }}</h2>
+  <p>Type: {{ pet.petKind }}</p>
+  <p>Age: {{ pet.age }}</p>
+  <img [src]="'/assets/images/' + pet.image" alt="{{ pet.name }}">
+</div>
