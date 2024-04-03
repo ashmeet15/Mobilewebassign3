@@ -1,0 +1,17 @@
+/* Pet details */
+.pet_label {
+  font-weight: bold;
+}
+
+.pet_image {
+  border-radius: 50%; /* Round shape */
+}
+
+.text_box {
+  background-color: #ffffcc; /* Light yellow */
+  padding: 10px;
+}
+
+.message {
+  color: #663333; /* Dark brown */
+}

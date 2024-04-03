@@ -9,14 +9,24 @@ import { Pet } from '../pets';
   styleUrls: ['./petdetail.component.css']
 })
 export class PetDetailComponent implements OnInit {
-  pet: Pet | undefined;
+  pet?: Pet;
 
-  constructor(private route: ActivatedRoute, private petDataService: PetDataService) { }
+  constructor(
+    private petDataService: PetDataService,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    const petId = +this.route.snapshot.paramMap.get('id')!;
-    this.petDataService.getPetById(petId).subscribe(data => {
-      this.pet = data;
+    this.activatedRoute.params.subscribe(params => {
+      const id = +params['id']; // The '+' sign is a shorthand to convert the string to a number
+      if (id) {
+        this.petDataService.getPet(id).subscribe(
+          (pet) => {
+            this.pet = pet;
+          },
+          error => console.error('Error fetching pet:', error)
+        );
+      }
     });
   }
 }

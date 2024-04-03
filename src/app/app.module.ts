@@ -1,25 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { PetlistComponent } from './petlist/petlist.component';
-import { PetdetailComponent } from './petdetail/petdetail.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { PetListComponent } from './petlist/petlist.component';
+import { PetDetailComponent } from './petdetail/petdetail.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PetlistComponent,
-    PetdetailComponent,
+    FooterComponent,
     HeaderComponent,
-    FooterComponent
+    PetListComponent,
+    PetDetailComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule // Make sure to import the HttpClientModule
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

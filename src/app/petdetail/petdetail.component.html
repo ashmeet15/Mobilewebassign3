@@ -1,6 +1,21 @@
-<div *ngIf="pet" class="pet-detail-container">
-  <h2>{{ pet.name }}</h2>
-  <p>Type: {{ pet.petKind }}</p>
-  <p>Age: {{ pet.age }}</p>
-  <img [src]="'/assets/images/' + pet.image" alt="{{ pet.name }}">
-</div>
+<ng-container *ngIf="pet !== undefined; else not_found">
+  <p>
+    <span class="pet_label">Pet:</span>
+    <span class="pet_name">{{ pet.name }}</span>
+  </p>
+  <p>
+    <img [src]="pet.image" [alt]="pet.name" class="pet_image">
+  </p>
+  <div class="text_box">
+    <p><strong>Kind:</strong> {{ pet.petKind }}</p>
+    <p><strong>Age:</strong> {{ pet.age }}</p>
+  </div>
+</ng-container>
+<ng-template #not_found>
+  <p class="message">
+    The data is not found.
+  </p>
+</ng-template>
+<p>
+  <a routerLink="/petlist">Pet Catalog</a>
+</p>

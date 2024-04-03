@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PetlistComponent } from './petlist/petlist.component';
-import { PetdetailComponent } from './petdetail/petdetail.component';
+import { Routes, RouterModule } from '@angular/router';
+import { PetListComponent } from './petlist/petlist.component';
+import { PetDetailComponent } from './petdetail/petdetail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/petlist', pathMatch: 'full' },
-  { path: 'petlist', component: PetlistComponent },
-  { path: 'petdetail/:id', component: PetdetailComponent },
+  { path: 'petlist', component: PetListComponent },
+  { path: 'petdetail/:id', component: PetDetailComponent },
+
 ];
 
 @NgModule({

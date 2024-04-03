@@ -1,0 +1,22 @@
+/* Header */
+.app-header {
+  background-color: #ccffcc; /* Light green */
+  padding: 10px 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ccccff; /* Light blue */
+}
+
+.navbar-brand {
+  color: #333; /* Dark gray */
+}
+
+.navbar-toggler-icon {
+  background-color: #333; /* Dark gray */
+}
+
+.navbar-nav .nav-link {
+  color: #333; /* Dark gray */
+}

@@ -1,9 +1,8 @@
-// pets.ts
-export class Pet {
-  public id: number = 0;
-  public name: string = '';
-  public petKind: string = '';
-  public age: number = 0;
-  public image: string = '';
-  public ownerId: number = 0;
+export interface Pet {
+  id: number;
+  name: string;
+  petKind: string;
+  age: number;
+  image: string;
+  ownerId: number;
 }

@@ -1,4 +1,4 @@
-// catalog-data.ts
+// catalog-data
 import { CatalogJson } from "./json-structure";
 
 export const catalog: CatalogJson = {
