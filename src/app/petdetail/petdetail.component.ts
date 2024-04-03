@@ -18,7 +18,7 @@ export class PetDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      const id = +params['id']; // The '+' sign is a shorthand to convert the string to a number
+      const id = +params['id'];
       if (id) {
         this.petDataService.getPet(id).subscribe(
           (pet) => {
