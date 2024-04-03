@@ -1,12 +1,12 @@
-/* Pet Catalog */
+
 h2 {
-  color: #333; /* Dark gray */
+  color: #333;
 }
 
 .thumb {
-  border-radius: 50%; /* Round shape */
+  border-radius: 50%;
 }
 
 .pet_name, .pet_kind, .pet_age {
-  color: #333; /* Dark gray */
+  color: #333;
 }
